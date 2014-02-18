@@ -11,6 +11,16 @@ include_recipe "tomcat::default"
 inlcude_recipe "maven"
 
 execute 'apt-get update'
+
+apt_package "name" do
+  attribute "value" # see attributes section below
+  ...
+  action :action # see actions section below
+end
+
+#execute 'wget "http://<user>:<pass>@<host>:<port>/manager/deploy?path=/<context>&war=file:<filepath>" -O - -q'
+
+
 cookbook_file "/etc/motd" do
   action :create
 end
