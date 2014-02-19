@@ -19,13 +19,30 @@
   #tomcat
 #end
 
+service "tomcat" do
+  service_name "tomcat6"
+  supports :restart => true, :reload => false, :status => true
+  action [:enable, :stop]
+  retries 4
+  retry_delay 20
+end
+
 bash "install_something" do
   user "root"
   cwd "/vagrant"
   code <<-EOH
   mvn -f /vagrant/pom.xml clean install
-  wget http://deploy:mfa123@localhost:8080/manager/deploy?path=/demoapp&war=file:/vagrant/target/demoapp.war -O - -q
+  cp /vagrant/target/demoapp.war /var/lib/tomcat6/webapps/
+  wget "http://deploy:mfa123@localhost:8080/host-manager/deploy?path=/demoapp&war=file:/vagrant/target/demoapp.war" -O - -q
   EOH
+end
+
+service "tomcat" do
+  service_name "tomcat6"
+  supports :restart => true, :reload => false, :status => true
+  action [:enable, :start]
+  retries 4
+  retry_delay 20
 end
 
 #execute 'wget "http://deploy:mfa123@localhost:8080/manager/deploy?path=/demoapp&war=file:/vagrant/target/demoapp.war" -O - -q'
