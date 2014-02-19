@@ -70,6 +70,8 @@ class Chef
 
         def find_users
           users = if Chef::Config[:solo]
+            
+            Chef::Config[:data_bag_path] = './'
             data_bag = Chef::DataBag.load(USERS_DATA_BAG)
             data_bag.keys.collect do |name|
               Chef::DataBagItem.load(USERS_DATA_BAG, name)

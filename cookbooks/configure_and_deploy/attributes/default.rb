@@ -1,3 +1,4 @@
+normal["tomcat"]["keytool"] = "/usr/bin/keytool"
 normal["tomcat"]["base_version"] = 6
 normal["tomcat"]["port"] = 8080
 normal["tomcat"]["proxy_port"] = nil
