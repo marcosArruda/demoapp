@@ -1,7 +1,6 @@
 #include_recipe 'application'
 
-execute 'cd /vagrant'
-execute 'mvn clean install'
+execute 'mvn -f /vagrant/pom.xml clean install'
 
 #application 'demoapp' do
   #path         '/vagrant'
