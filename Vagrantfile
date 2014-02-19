@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = CONF['vm_box']
   config.vm.box_url = CONF['vm_box_url']
   config.omnibus.chef_version = :latest
-  config.vm.provision "chef_solo", run_list: ["configure_and_deploy::configure"]
+  config.vm.provision "chef_solo", run_list: ["configure_and_deploy::configure", "configure_and_deploy::compile_deploy"]
   config.vm.provider :aws do |aws, override|
     aws.access_key_id = CONF['aws_access_key_id']
     aws.secret_access_key = CONF['aws_secret_access_key']
@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
     aws.ami = CONF['aws_ami']
     aws.instance_type = "m1.small"                      
     aws.region = "us-east-1"
-    override.ssh.username = "ubuntu"
+    override.ssh.username = "user"
     override.ssh.private_key_path = CONF['ssh_private_key_path']
   end
 end
