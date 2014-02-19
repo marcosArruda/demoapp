@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
     aws.ami = CONF['aws_ami']
     aws.instance_type = "m1.small"                      
     aws.region = "us-east-1"
-    override.ssh.username = "user"
+    override.ssh.username = "ubuntu"
     override.ssh.private_key_path = CONF['ssh_private_key_path']
   end
 end

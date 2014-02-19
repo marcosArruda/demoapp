@@ -24,6 +24,5 @@ execute 'apt-get update'
 
 
 cookbook_file "/etc/motd" do
-  source '/vagrant/cookbooks/configure_and_deploy/files/default/motd'
-  action :create
+  action :update
 end
