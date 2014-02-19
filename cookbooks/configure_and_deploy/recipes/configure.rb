@@ -23,6 +23,3 @@ execute 'apt-get update'
 #execute 'wget "http://<user>:<pass>@<host>:<port>/manager/deploy?path=/<context>&war=file:<filepath>" -O - -q'
 
 
-cookbook_file "/etc/motd" do
-  action :update
-end
