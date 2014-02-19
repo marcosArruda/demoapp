@@ -33,7 +33,6 @@ bash "install_something" do
   code <<-EOH
   mvn -f /vagrant/pom.xml clean install
   cp /vagrant/target/demoapp.war /var/lib/tomcat6/webapps/
-  wget "http://deploy:mfa123@localhost:8080/host-manager/deploy?path=/demoapp&war=file:/vagrant/target/demoapp.war" -O - -q
   EOH
 end
 
