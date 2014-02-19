@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   config.vm.box = CONF['config']['vm_box']
   config.vm.box_url = CONF['config']['vm_box_url']
   config.omnibus.chef_version = :latest
-  config.vm.provision "chef_solo", run_list: ["install_packages::default"]
+  config.vm.provision "chef_solo", run_list: ["configure_and_deploy::configure"]
   config.vm.provider :aws do |aws, override|
     aws.access_key_id = CONF['config']['aws_access_key_id']
     aws.secret_access_key = CONF['config']['aws_secret_access_key']
