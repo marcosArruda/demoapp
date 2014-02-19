@@ -1,4 +1,4 @@
-name             'install_packages'
+name             'configure_and_deploy'
 maintainer       'Summa'
 maintainer_email 'marcos.arruda@summa.com.br'
 license          'All rights reserved'
@@ -14,4 +14,5 @@ end
   supports os
 end
 
-recipe 'install_packages::default', 'install tomcat and others packages configured for toolcloud'
+recipe 'configure_and_deploy::configure', 'install tomcat and others packages configured for toolcloud'
+recipe 'configure_and_deploy::compile_deploy', 'compile and deploy the application'

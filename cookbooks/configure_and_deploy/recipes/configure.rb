@@ -1,6 +1,6 @@
 #
-# Cookbook Name:: install_packages
-# Recipe:: default
+# Cookbook Name:: configure_and_deploy
+# Recipe:: configure
 #
 # Copyright 2014, YOUR_COMPANY_NAME
 #
@@ -8,9 +8,9 @@
 #
 
 include_recipe 'apt'
+include_recipe "maven"
 include_recipe "tomcat::default"
-inlcude_recipe "maven"
-
+include_recipe "tomcat::users"
 execute 'apt-get update'
 
 

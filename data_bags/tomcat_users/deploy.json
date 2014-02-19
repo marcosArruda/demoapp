@@ -1,0 +1,8 @@
+{
+  "id": "deploy",
+  "password": "mfa123",
+  "roles": [
+    "manager",
+    "admin"
+  ]
+}
