@@ -3,7 +3,7 @@ require 'yaml'
 CONF = YAML::load_file("/home/" + ENV['USER'] + "/vagrant_config.yml")
 
 Vagrant.configure("2") do |config|
-  config.vm.hostname = "toolscloud-demo-machine"
+  config.vm.hostname = "summa-demo-machine"
   config.vm.box = CONF['vm_box']
   config.vm.box_url = CONF['vm_box_url']
   config.omnibus.chef_version = :latest
