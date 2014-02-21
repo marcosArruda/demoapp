@@ -66,8 +66,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="item active">
-          <img data-src="bootstrap/js/holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="Vagrant + Chef">
-          <!-- <img data-src="img/nuvem.jpg" alt="Uma nuvem" width="900" height="500" style="width:900px; height:500px "> -->
+          <img data-src="bootstrap/js/holder.js/900x500/auto/#777:#7a7a7a/text:Vagrant + Chef" alt="Vagrant + Chef">
           <div class="container">
             <div class="carousel-caption">
               <h1>Usando o Vagrant com Chef.</h1>
@@ -77,7 +76,7 @@
           </div>
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Second slide" alt="Motivação">
+          <img data-src="holder.js/900x500/auto/#666:#6a6a6a/text:Motivação" alt="Motivação">
           <div class="container">
             <div class="carousel-caption">
               <h1>Motivação</h1>
@@ -87,7 +86,7 @@
           </div>
         </div>
         <div class="item">
-          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Third slide" alt="Third slide">height:500px ">
+          <img data-src="holder.js/900x500/auto/#555:#5a5a5a/text:Continuous Deployment" alt="Continuous Deployment">
           <div class="container">
             <div class="carousel-caption">
               <h1>Continuous Deployment.</h1>
