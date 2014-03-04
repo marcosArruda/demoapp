@@ -1,0 +1,11 @@
+vm_box: <--nome da sua box(instancia)-->
+vm_box_url: <--url da sua box default para uso local no VirtualBox (http://files.vagrantup.com/precise64.box)--> 
+aws_access_key_id: <--access_key da aws-->
+aws_secret_access_key: <--secret access key da aws-->
+aws_keypair_name: <--arquivo keypair .pem da aws-->
+aws_security_groups: ["<--nomegrupo de segurança criado na aws-->"]
+aws_ami: <--id da ami base que você vai usar na aws-->
+instance_type: <--nome da instancia da aws ex.:"m1.small"-->
+aws_region: <--região da aws onde voce vai criar a instância. ex.:"us-east-1"-->
+default_username: <--username default usado para logar na sua instância. Use "ubuntu"-->
+ssh_private_key_path: <--caminho pro arquivo .pem private key da sua conta aws-->

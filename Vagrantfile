@@ -1,6 +1,6 @@
 require 'yaml'
 
-CONF = YAML::load_file("/home/" + ENV['USER'] + "/configs/vagrant_config.yml")
+CONF = YAML::load_file("vagrant_config.yml")
 
 Vagrant.configure("2") do |config|
   config.vm.hostname = "summa-demo-machine"
