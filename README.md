@@ -10,23 +10,25 @@ Como Usar?
 
 * Baixe e instale o Vagrant: http://www.vagrantup.com/downloads.html
 * Instale os plugins do Vagrant:
-
+```
     vagrant plugin install vagrant-omnibus
     vagrant plugin install vagrant-aws
+```
 
 * Baixe e instale o VirtualBox: https://www.virtualbox.org/wiki/Downloads
 
 * Clone esse repositorio
-
+```
     git clone https://github.com/marcosArruda/demoapp.git
+```
 
 * Copie o arquivo vagrant_config_template.yml para vagrant_config.yml
 
 * Se quiser executar localmente na sua propria máquina:
-
+```
     vagrant up
-
+```
 * Caso prefira executar em uma maquina virtual na Amazon AWS, coloque suas chaves da Amazon no arquivo vagrant_config.yml
-
+```
     vagrant up --provider=aws
-
+```
