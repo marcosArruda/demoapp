@@ -27,7 +27,7 @@ service "tomcat" do
   retry_delay 20
 end
 
-bash "install_something" do
+bash "compileproject_and_deploy" do
   user "root"
   cwd "/vagrant"
   code <<-EOH
