@@ -12,14 +12,3 @@ include_recipe "maven"
 include_recipe "tomcat::default"
 include_recipe "tomcat::users"
 execute 'apt-get update'
-
-
-#apt_package "name" do
-  #attribute "value" # see attributes section below
-  #...
-  #action :action # see actions section below
-#end
-
-#execute 'wget "http://<user>:<pass>@<host>:<port>/manager/deploy?path=/<context>&war=file:<filepath>" -O - -q'
-
-
